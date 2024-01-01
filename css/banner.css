@@ -1,0 +1,128 @@
+.banner{
+    height: fit-content;
+    background: 
+        linear-gradient(
+            to right,
+            rgb(0 0 0 / 0.8),
+            rgb(0 0 0 / 0.5)
+        ),
+        url('../assets/banner_2.jpg');
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+    transition: 1.2s;
+    display: flex;
+    align-items: center;
+}
+
+.banner_content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 220px 0;
+    animation: showContentBanner 1.4s
+}
+
+.banner_content .banner_content-text{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+}
+
+.banner_content-text .banner_titulo{
+    font-size: clamp(2rem, 0.714rem + 3.429vw, 3.8rem);
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0px 0px 20px #000000;
+    padding: 0 80px;
+}
+
+.banner_content-text .banner_subtitulo{
+    font-size: clamp(1rem, 0.72rem + 1.4vw, 2.4rem);
+    font-weight: 400;
+    color: var(--dodger-blue-400);
+    text-shadow: 0px 0px 20px #000000;
+    padding: 0 80px;
+}
+
+.banner_content .banner_buttons{
+    flex-grow: 1;
+    margin: 0 80px;
+    display: flex;
+    gap: 20px;
+}
+
+.banner_buttons .banner_link{
+    text-decoration: none;
+    color: #fff;
+    background: transparent;
+    border: 2px solid var(--dodger-blue-100);
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: clamp(1rem, 0.84rem + 0.8vw, 1.8rem);
+    transition: 0.2s;
+}
+
+.banner_buttons .banner_link:hover{
+    border: 2px solid var(--dodger-blue-600);
+    background: var(--dodger-blue-600);
+    box-shadow: 0 0 3px var(--dodger-blue-500);
+}
+
+
+@keyframes showContentBanner {
+    from{
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media screen and (max-width: 768px){
+
+    .banner{
+        height: 100vh;
+    }
+
+    .banner_content-text .banner_titulo, 
+    .banner_content-text .banner_subtitulo{
+        padding: 0 30px;
+    }
+
+    .banner_content .banner_buttons{
+        margin: 0 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .banner_buttons .banner_link{
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .banner{
+        height: 100vh;
+    }
+
+    .banner_content-text .banner_titulo, 
+    .banner_content-text .banner_subtitulo{
+        padding: 0 30px;
+    }
+
+    .banner_content .banner_buttons{
+        margin: 0 30px;
+
+    }
+
+    .banner_buttons .banner_link{
+        padding: 10px 20px;
+    }
+}

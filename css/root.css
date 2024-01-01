@@ -1,0 +1,77 @@
+:root{
+    font-size: 10px;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    --color-fondo-body: #FDFDFD;
+    --dodger-blue-50: #edfcff;
+    --dodger-blue-100: #d7f5ff;
+    --dodger-blue-200: #b8f0ff;
+    --dodger-blue-300: #88e9ff;
+    --dodger-blue-400: #4fd9ff;
+    --dodger-blue-500: #27bfff;
+    --dodger-blue-600: #10a4ff;
+    --dodger-blue-700: #098df1;
+    --dodger-blue-800: #0e6ebf;
+    --dodger-blue-900: #125d96;
+    --dodger-blue-950: #10385b;
+
+
+    /* #b3d7ff celeste mas claro*/
+    /* #a1e9c1 Verde menta */
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--color-fondo-body);
+}
+
+
+.scroll_to_up_button_showed{
+    display: block;
+    opacity: 1;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    color: var(--dodger-blue-950);
+    background: var(--dodger-blue-500);
+    font-size: 3rem;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px #2b2a2a;
+    transition: 1.1s;
+    z-index: 10;
+}
+
+.scroll_to_up_button_hidden{
+    opacity: 0;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    color: var(--dodger-blue-950);
+    background: var(--dodger-blue-500);
+    font-size: 3rem;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px #2b2a2a;
+    transform: translateX(200px);
+    transition: 1.1s;
+    z-index: 10;
+}
+
+@media screen and (max-width: 768px){
+    .scroll_to_up_button_showed{
+        display: none;
+    }
+
+    .scroll_to_up_button_hidden{
+        display: none;
+    }
+}

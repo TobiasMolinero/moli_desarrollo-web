@@ -1,0 +1,169 @@
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 40px 0;
+    transition: 0.4s;
+}
+
+.header_sticked{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 25px 0;
+    background: var(--dodger-blue-700);
+    z-index: 1000;
+    box-shadow: 0 0 10px 1px #272727;
+    transition: 0.4s;
+}
+
+.logo{
+    margin: 0 70px;
+}
+
+.header .menu{
+    width: 450px;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.menu ul>li{
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul>li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    text-shadow: 0 0 2px #fff;
+}
+
+.menu ul>li a:hover{
+    color: var(--dodger-blue-500);
+    text-shadow:  0 0 5px var(--dodger-blue-500);
+}
+
+.menu ul>li a:active{
+    color: white;
+}
+
+.header_sticked .menu{
+    width: 450px;
+}
+
+.header_sticked.menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.header_sticked .menu ul>li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.header_sticked .menu ul>li a:hover{
+    color: var(--dodger-blue-950);
+    text-shadow:  0 0 2px var(--dodger-blue-950);
+}
+
+.header_sticked .menu ul>li a:active{
+    color: white;
+}
+
+.menu-responsive{
+    display: none;
+}
+
+.menu-responsive ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 0 0 0 30px;
+}
+
+
+.menu-responsive ul>li a{
+    color: var(--dodger-blue-950);
+    text-decoration: none;
+}
+
+.boton-responsive{
+    display: none;
+}
+
+.boton-close{
+    padding: 15px;
+    align-self: end;
+    font-size: 2rem;
+}
+
+
+.closed{
+    width: 0;
+    height: 100vh;
+    overflow: hidden;
+    transition: 0.1s ;
+}
+
+.open{
+    width: 200px;
+    height: 100%;
+    box-shadow: -2px 0 7px #1d1d1d;
+    transition: 0.1s ;
+}
+
+
+
+
+@media screen and (max-width: 768px){
+
+    .header{
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .header .logo{
+        margin: 0;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .menu-responsive{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        background: var(--dodger-blue-300);
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+
+    .boton-responsive{
+        display: inline-block;
+        color: white;
+        font-size: 2.8rem;
+    }
+}
