@@ -16,8 +16,6 @@
     --dodger-blue-950: #10385b;
 
 
-    /* #b3d7ff celeste mas claro*/
-    /* #a1e9c1 Verde menta */
 }
 
 *{
@@ -44,7 +42,6 @@ body{
     padding: 15px;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 3px 3px 10px #2b2a2a;
     transition: 1.1s;
     z-index: 10;
 }

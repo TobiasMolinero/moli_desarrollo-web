@@ -89,6 +89,7 @@
 
     .banner{
         height: 100vh;
+        background-attachment: none;
     }
 
     .banner_content-text .banner_titulo, 
@@ -110,6 +111,7 @@
 @media screen and (min-width: 768px) and (max-width: 1023px){
     .banner{
         height: 100vh;
+        background-attachment: none;
     }
 
     .banner_content-text .banner_titulo, 

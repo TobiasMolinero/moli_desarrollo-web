@@ -1,5 +1,5 @@
 .info{
-    padding: 60px 100px;
+    padding: 60px 80px;
 }
 
 .info_empresa{
@@ -31,6 +31,7 @@
 .info_empresa_text .info_empresa_descripcion{
     font-size: clamp(1.2rem, 1.143rem + 0.952vw, 1.8rem);
     color: #4b4b4b;
+    line-height: 25px;
 }
 
 .info_empresa_text .info_empresa_buttons{
@@ -75,10 +76,15 @@
     transform: translateX(200px);
 }
 
+.text_bold{
+    color: #4b4b4b;
+    font-weight: 700;
+}
+
 
 @media screen and (max-width: 768px){
     .info{
-        padding: 20px ;
+        padding: 30px ;
     }
 
 
@@ -101,7 +107,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
     .info{
-        padding: 60px ;
+        padding: 60px 80px;
     }
 
 
